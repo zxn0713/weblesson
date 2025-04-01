@@ -1,10 +1,10 @@
 body {
-	font-size: small; /* 新的属性值，请自行了解 */
+	font-size: small; 
 	font-family: Verdana， Helvetica， Arial;
 }
 
 h1, h2 {
-	color: #007e7e; /* 将标题设置为一种青绿色，使他和 logo 更相合 */
+	color: #007e7e;
 }
 
 h1 {
@@ -24,5 +24,10 @@ h2 {
   font-style: italic;
   color: #444444;
   font-family:Georgia, "Times New Roman";
+  background-image: url(images/background.gif);
   line-height: 1.9em;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 80px;
+  border-radius: 0 30px 0 30px;
 }
