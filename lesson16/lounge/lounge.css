@@ -1,0 +1,33 @@
+body {
+	font-size: small; 
+	font-family: Verdana， Helvetica， Arial;
+}
+
+h1, h2 {
+	color: #007e7e;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+.guarantee {
+  border-color:        white;
+  border-width:        1px;
+  border-style:        dashed;
+  background-color:    #a7cece;
+  padding:             25px; 
+  margin:              30px;  /* 新增外边距 */
+  font-style: italic;
+  color: #444444;
+  font-family:Georgia, "Times New Roman";
+  background-image: url(images/background.gif);
+  line-height: 1.9em;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 80px;
+  border-radius: 0 30px 0 30px;
+}

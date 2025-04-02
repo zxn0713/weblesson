@@ -1,0 +1,66 @@
+body {
+	font-size: small; 
+	font-family: Verdana， Helvetica， Arial;
+}
+
+h1, h2 {
+	color: #007e7e;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+.guarantee {
+  border-color:        white;
+  border-width:        1px;
+  border-style:        dashed;
+  background-color:    #a7cece;
+  padding:             25px; 
+  margin:              30px;  /* 新增外边距 */
+  font-style: italic;
+  color: #444444;
+  font-family:Georgia, "Times New Roman";
+  background-image: url(images/background.gif);
+  line-height: 1.9em;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 80px;
+  border-radius: 0 30px 0 30px;
+}
+.elixirs {
+	border: thin solid #007e7e;
+  width: 200px;
+  padding:0px 20px 20px 20px;
+	margin-left: 20px;
+  background: white url(images/cocktail.gif) repeat-x;
+	text-align: center;
+  line-height: 1;
+}
+.elixirs > h2{
+  color:#000
+}
+.elixirs > h3{
+  color:#d12c47
+}
+.cd {
+	font-style: italic;
+}
+.artist {
+	font-weight: bold;
+}
+.elixirs a:link {
+  color: #007e7e;
+}
+
+.elixirs a:visited {
+  color: #333333;
+}
+
+.elixirs a:hover {
+  background: #f88396;
+  color: #0d5353;
+}
