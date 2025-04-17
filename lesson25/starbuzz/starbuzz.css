@@ -91,3 +91,6 @@ div.talbeRow {
   width: 20%;
   display: table-cell;
 }
+.picture{
+  float: right;
+}
