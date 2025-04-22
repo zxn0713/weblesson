@@ -41,6 +41,7 @@ body {
   padding:          15px;
   margin:           10px;
   font-size:        90%;
+  clear: right;
 }
 
 h1 {
@@ -93,4 +94,31 @@ div.talbeRow {
 }
 .picture{
   float: right;
+}
+.award {
+	position: fixed;
+	top: 30px;
+	left: 45%;
+  animation: rotate 2s linear infinite;
+}
+.coupon {
+	position: fixed;
+	top: 350px;
+	left: -210px;
+  margin-right: 33px;
+  transition: left 10s ease;   /* 添加过渡效果 */
+}
+.coupon:hover {
+  left: 0px;
+}
+.coupon a, img{
+	border: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
