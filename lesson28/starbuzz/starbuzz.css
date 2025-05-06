@@ -122,10 +122,3 @@ div.talbeRow {
     transform: rotate(360deg);
   }
 }
-section.main, section.blog {
-  display: table-cell;
-  background:       #efe5d0 url(images/background.gif) top left;
-  font-size:        105%;
-  padding:          15px;
-  vertical-align: top;
-}

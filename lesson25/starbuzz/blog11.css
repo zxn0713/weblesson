@@ -13,14 +13,12 @@ body {
   height:           108px;
 }
 
-#main {
+section.main, section.blog {
+  display: table-cell;
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 10px 10px 10px;
-  display: table-cell;
-  vertical-align: top; 
-  width: 60%;
+  vertical-align: top;
 }
 
 #sidebar {
@@ -122,10 +120,32 @@ div.talbeRow {
     transform: rotate(360deg);
   }
 }
-section.main, section.blog {
-  display: table-cell;
-  background:       #efe5d0 url(images/background.gif) top left;
-  font-size:        105%;
-  padding:          15px;
-  vertical-align: top;
+nav {
+  background-color: #efe5d0;
+  margin: 10px 10px 0px 10px;
 }
+
+nav ul {
+	margin: 0px;
+	list-style-type: none;
+	padding: 5px 0px 5px 5px;
+}
+
+nav ul li {
+	display: inline;
+	padding: 5px 10px 5px 10px;
+}
+
+ul li a:link, nav ul li a:visited {
+	color: #954b4b;
+	border-bottom: none;
+	font-weight: bold;
+/*
+	text-shadow: 1px 1px 3px #e2c2c2; 
+	text-transform: uppercase;
+*/
+}
+nav ul li.selected {
+	background-color: #c8b99c;
+}
+
