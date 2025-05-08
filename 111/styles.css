@@ -1,0 +1,180 @@
+/* ============= 全局重置 ============= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  padding: 20px;
+  color: #333;
+}
+
+/* ============= 新闻容器 ============= */
+.kyoto-news {
+  background-color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 8px;
+  
+  /* 三重边框保障方案 */
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  /* 调试用边框（如有问题取消注释） */
+  /* outline: 2px dashed red; */
+}
+
+/* ============= 标题样式 ============= */
+.section-title {
+  color: #0066cc;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  
+  /* 双下划线保障 */
+  border-bottom: 2px solid #eaeaea;
+  background-image: linear-gradient(to right, #eaeaea, #eaeaea);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 100% 2px;
+}
+
+/* ============= 新闻列表 ============= */
+.news-list {
+  list-style: none;
+}
+
+.news-item {
+  padding: 15px 0;
+  position: relative;
+  
+  /* 四重分隔线保障 */
+  border-bottom: 1px solid #eaeaea;
+  background-image: 
+      linear-gradient(to right, #eaeaea, #eaeaea),
+      linear-gradient(to right, #eaeaea, #eaeaea);
+  background-repeat: no-repeat;
+  background-position: 0 100%, 0 100%;
+  background-size: 100% 1px, 100% 0.5px;
+}
+
+/* 最后一项无分隔线 */
+.news-item:last-child {
+  border-bottom: none;
+  background-image: none;
+}
+
+/* ============= 日期样式 ============= */
+time {
+  display: block;
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 5px;
+}
+
+/* ============= 分类标签 ============= */
+.news-category {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+  
+  /* 内边框增强可视性 */
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+/* ============= 新闻标题 ============= */
+.news-title {
+  font-size: 1rem;
+  color: #222;
+  margin-top: 8px;
+  font-weight: normal;
+  position: relative;
+  padding-right: 25px;
+}
+
+/* 数字标记 */
+.news-item:nth-child(1) .news-title::after {
+  color: #0066cc;
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+.news-item:nth-child(2) .news-title::after {
+  color: #0066cc;
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+.news-item:nth-child(4) .news-title::after {
+  color: #0066cc;
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+
+/* ============= 查看更多 ============= */
+.more-news {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.more-link {
+  color: #0066cc;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: all 0.2s;
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.more-link:hover {
+  text-decoration: underline;
+  background-color: rgba(0, 102, 204, 0.05);
+}
+
+/* ============= 响应式设计 ============= */
+@media (max-width: 600px) {
+  .kyoto-news {
+      padding: 15px;
+      border-width: 2px; /* 移动端加粗边框 */
+  }
+  
+  .news-item {
+      padding: 12px 0;
+  }
+}
+
+/* ============= 打印样式 ============= */
+@media print {
+  .kyoto-news {
+      border: 2px solid #000 !important;
+      box-shadow: none !important;
+  }
+  .more-news {
+      display: none;
+  }
+}
+
+/* ============= 调试辅助 ============= */
+.debug-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  border: 5px solid rgba(255,0,0,0.3);
+  display: none; /* 需要调试时设为block */
+}

@@ -1,0 +1,166 @@
+/* ============= 全局重置 ============= */
+.sectioning-block--ice-blue * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============= 主容器样式 ============= */
+.views-element-container.sectioning-block {
+  background-color: #f0f8ff; /* 冰蓝色背景 */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  
+  /* 三重边框保障 */
+  border: 1px solid #c1e1ff;
+  outline: 1px solid #c1e1ff;
+  box-shadow: 0 0 0 1px #c1e1ff;
+}
+
+/* ============= 标题样式 ============= */
+.block__title {
+  color: #0066cc;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c1e1ff;
+}
+
+/* ============= 活动列表容器 ============= */
+.recent-article-list {
+  background-color: white;
+  border-radius: 6px;
+  padding: 15px;
+  
+  /* 边框保障 */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ============= 活动项样式 ============= */
+.recent-article-list__items {
+  list-style: none;
+}
+
+.recent-article-list__item {
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+
+/* 最后一项无边框 */
+.recent-article-list__item:last-child {
+  border-bottom: none;
+}
+
+/* ============= 活动卡片样式 ============= */
+.small-teaser-event {
+  display: block;
+  transition: transform 0.2s;
+}
+
+.small-teaser-event:hover {
+  transform: translateX(5px);
+}
+
+.small-teaser-event__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 分类标签 */
+.field--name-field-category .field__item {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+  border: 1px solid #ddd; /* 新增边框 */
+}
+
+/* 活动标题 */
+.small-teaser-event__title {
+  font-size: 1rem;
+  color: #222;
+  display: block;
+  margin: 8px 0;
+  position: relative;
+  padding-right: 20px;
+  border-left: 3px solid #0066cc; /* 左侧装饰线 */
+  padding-left: 10px;
+}
+
+/* 日期和地点样式 */
+.field--name-field-event-date,
+.field--name-field-venue {
+  color: #666;
+  font-size: 0.875rem;
+  margin: 5px 0;
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  border: 1px dashed #ccc; /* 虚线边框 */
+}
+
+/* 图片容器 */
+.field--name-field-featured-image {
+  margin: 10px 0;
+  border: 1px solid #eee; /* 图片边框 */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 查看更多链接 */
+.more-link {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.more-link a {
+  color: #0066cc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #0066cc; /* 链接边框 */
+}
+
+.more-link a:hover {
+  background-color: rgba(0, 102, 204, 0.1);
+  text-decoration: none;
+}
+
+/* ============= 响应式设计 ============= */
+@media (max-width: 768px) {
+  .views-element-container.sectioning-block {
+      padding: 15px;
+  }
+  
+  .recent-article-list {
+      padding: 10px;
+  }
+  
+  .recent-article-list__item {
+      padding: 12px 0;
+  }
+  
+  .small-teaser-event__title {
+      font-size: 0.9375rem;
+  }
+}
+
+/* ============= 特殊状态 ============= */
+.external-link::after {
+  content: "↗";
+  font-size: 0.75em;
+  margin-left: 3px;
+  display: inline-block;
+  color: #0066cc;
+}
