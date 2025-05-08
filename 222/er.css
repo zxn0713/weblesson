@@ -1,166 +1,122 @@
-/* ============= 全局重置 ============= */
-.sectioning-block--ice-blue * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ============= 主容器样式 ============= */
-.views-element-container.sectioning-block {
-  background-color: #f0f8ff; /* 冰蓝色背景 */
-  border-radius: 8px;
+/* 全局活动列表容器 */
+.events-container {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  margin-bottom: 30px;
-  
-  /* 三重边框保障 */
-  border: 1px solid #c1e1ff;
-  outline: 1px solid #c1e1ff;
-  box-shadow: 0 0 0 1px #c1e1ff;
 }
 
-/* ============= 标题样式 ============= */
-.block__title {
-  color: #0066cc;
-  font-size: 1.5rem;
+/* 主标题 */
+.events-title {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 8px;
+}
+
+/* 单个活动卡片 */
+.event-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 20px;
   margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #c1e1ff;
-}
-
-/* ============= 活动列表容器 ============= */
-.recent-article-list {
-  background-color: white;
-  border-radius: 6px;
-  padding: 15px;
-  
-  /* 边框保障 */
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-/* ============= 活动项样式 ============= */
-.recent-article-list__items {
-  list-style: none;
-}
-
-.recent-article-list__item {
-  padding: 15px 0;
-  border-bottom: 1px solid #f0f0f0;
-  position: relative;
-}
-
-/* 最后一项无边框 */
-.recent-article-list__item:last-child {
-  border-bottom: none;
-}
-
-/* ============= 活动卡片样式 ============= */
-.small-teaser-event {
-  display: block;
   transition: transform 0.2s;
 }
 
-.small-teaser-event:hover {
-  transform: translateX(5px);
-}
-
-.small-teaser-event__link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+.event-card:hover {
+  transform: translateY(-3px);
 }
 
 /* 分类标签 */
-.field--name-field-category .field__item {
+.event-category {
   display: inline-block;
-  background-color: #f0f0f0;
-  color: #555;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  margin-bottom: 8px;
-  border: 1px solid #ddd; /* 新增边框 */
+  background-color: #e8f4fc;
+  color: #2980b9;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
 }
 
 /* 活动标题 */
-.small-teaser-event__title {
-  font-size: 1rem;
-  color: #222;
-  display: block;
-  margin: 8px 0;
-  position: relative;
-  padding-right: 20px;
-  border-left: 3px solid #0066cc; /* 左侧装饰线 */
-  padding-left: 10px;
-}
-
-/* 日期和地点样式 */
-.field--name-field-event-date,
-.field--name-field-venue {
-  color: #666;
-  font-size: 0.875rem;
-  margin: 5px 0;
-  display: inline-block;
-  padding: 2px 5px;
-  background-color: #f9f9f9;
-  border-radius: 3px;
-  border: 1px dashed #ccc; /* 虚线边框 */
-}
-
-/* 图片容器 */
-.field--name-field-featured-image {
+.event-title {
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
   margin: 10px 0;
-  border: 1px solid #eee; /* 图片边框 */
+  line-height: 1.4;
+}
+
+/* 日期和地点容器 */
+.event-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* 详情项 */
+.event-detail {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #555;
+}
+
+/* 复选框样式 */
+.event-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3498db;
   border-radius: 4px;
-  overflow: hidden;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.event-checkbox:checked {
+  background-color: #3498db;
+}
+
+.event-checkbox:checked::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  left: 2px;
+  top: -2px;
+  font-size: 14px;
 }
 
 /* 查看更多链接 */
-.more-link {
-  margin-top: 20px;
-  text-align: right;
+.view-more {
+  text-align: center;
+  margin-top: 30px;
 }
 
-.more-link a {
-  color: #0066cc;
-  font-weight: bold;
+.view-more a {
+  color: #3498db;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 1px dashed #3498db;
+  padding-bottom: 2px;
   transition: all 0.2s;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: 1px solid #0066cc; /* 链接边框 */
 }
 
-.more-link a:hover {
-  background-color: rgba(0, 102, 204, 0.1);
-  text-decoration: none;
+.view-more a:hover {
+  color: #2980b9;
+  border-bottom-style: solid;
 }
 
-/* ============= 响应式设计 ============= */
-@media (max-width: 768px) {
-  .views-element-container.sectioning-block {
-      padding: 15px;
-  }
-  
-  .recent-article-list {
-      padding: 10px;
-  }
-  
-  .recent-article-list__item {
-      padding: 12px 0;
-  }
-  
-  .small-teaser-event__title {
-      font-size: 0.9375rem;
-  }
-}
-
-/* ============= 特殊状态 ============= */
-.external-link::after {
-  content: "↗";
-  font-size: 0.75em;
-  margin-left: 3px;
-  display: inline-block;
-  color: #0066cc;
-}
+/* 分类颜色变体 */
+.event-category.social { background-color: #e8f4fc; color: #2980b9; }
+.event-category.admission { background-color: #e8f8f0; color: #27ae60; }
+.event-category.alumni { background-color: #f9f0ff; color: #8e44ad; }
+.event-category.lecture { background-color: #fff0f0; color: #c0392b; }
