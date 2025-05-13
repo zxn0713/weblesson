@@ -1,122 +1,240 @@
-/* 全局活动列表容器 */
-.events-container {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  max-width: 800px;
+/* 横向排列活动项的CSS样式 */
+
+/* 主容器 */
+.views-element-container.sectioning-block--ice-blue {
+  background: white;
+  padding: 20px;
+  max-width: 1200px; 
   margin: 0 auto;
-  padding: 20px;
+  font-family: "Noto Sans JP", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
-/* 主标题 */
-.events-title {
-  color: #2c3e50;
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 25px;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 8px;
+/* 主标题"Upcoming Events" */
+.block__title {
+  font-size: 1.6rem; 
+  font-weight: 500; /* 修改字重 */
+  color: #003366; 
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
+  line-height: 1.25; /* 添加行高 */
 }
 
-/* 单个活动卡片 */
-.event-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: transform 0.2s;
+/* 分类标签样式 */
+.field--name-field-category .field__item {
+  color: #003366; 
+  font-size: 0.8rem; 
+  font-weight: 500; /* 修改字重 */
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
+  line-height: 1.25; /* 添加行高 */
 }
 
-.event-card:hover {
-  transform: translateY(-3px);
+/* 活动标题样式 */
+.field--name-title {
+  font-size: 1.0rem; 
+  line-height: 1.25; /* 修改行高 */
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-weight: 500; /* 修改字重 */
+  flex-grow: 1; 
+  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
 }
 
-/* 分类标签 */
-.event-category {
-  display: inline-block;
-  background-color: #e8f4fc;
-  color: #2980b9;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 12px;
+/* 日期和地点样式 */
+.field--name-field-event-date,
+.field--name-field-venue {
+  font-size: 0.75rem; 
+  color: #666;
+  display: block;
+  margin: 0.3rem 0;
+  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
+  font-weight: 500; /* 修改字重 */
+  line-height: 1.25; /* 添加行高 */
 }
 
-/* 活动标题 */
-.event-title {
-  color: #2c3e50;
-  font-size: 20px;
-  font-weight: 600;
-  margin: 10px 0;
+/* 查看更多链接样式 */
+.more-link a {
+  color: white; 
+  text-decoration: none; 
+  font-size: 0.7rem; 
+  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
+  font-weight: 500; /* 修改字重 */
+  line-height: 1.25; /* 添加行高 */
+}
+
+/* 活动列表容器 - 改为横向排列 */
+.recent-article-list__items {
+  list-style: none;
+  padding: 0;
+  margin: 0 -10px; /* 补偿活动项的外边距 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* 单个活动项 - 横向排列样式 */
+.recent-article-list__item {
+  width: calc(25% - 20px); /* 4项一排，考虑间距 */
+  margin: 0 10px 25px; /* 左右间距10px，底部间距25px */
+  padding: 15px;
+  border: 1px solid #f0f0f0; /* 改为边框而非底部边框 */
+  border-radius: 4px;
+  display: flex; /* 使用 flex 布局 */
+  flex-direction: row; /* 让子元素横向排列 */
+  box-sizing: border-box;
+}
+
+/* 图片容器样式 */
+.field--name-field-featured-image {
+  width: 50px; /* 缩小图片容器宽度，可按需调整 */
+  height: 50px; /* 统一图片容器高度，可按需调整 */
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+/* 图片样式 */
+.field--name-field-featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease; /* 添加过渡效果，让放大过程更平滑 */
+}
+
+/* 鼠标悬停时图片放大 */
+.field--name-field-featured-image img:hover {
+  transform: scale(1.1); /* 图片放大 10%，可按需调整 */
+}
+
+/* 活动内容区域，包含分类标签、标题、日期和地点等 */
+.recent-article-list__item > div:not(.field--name-field-featured-image) {
+  flex-grow: 1; /* 让内容区域占据剩余空间 */
+  padding-left: 15px; /* 给内容区域添加左边距，与图片隔开 */
+}
+
+/* 分类标签样式 */
+.field--name-field-category .field__item {
+  /* 修改颜色为墨蓝色 */
+  color: #003366; 
+  font-size: 0.8rem; /* 原 0.9rem 缩小 */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* 活动标题样式 */
+.field--name-title {
+  font-size: 1.0rem; /* 原 1.1rem 缩小 */
   line-height: 1.4;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-weight: normal;
+  flex-grow: 1; /* 让标题占据剩余空间 */
 }
 
 /* 日期和地点容器 */
-.event-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
+.small-teaser-event__meta {
+  margin-top: auto; /* 将元信息推到底部 */
 }
 
-/* 详情项 */
-.event-detail {
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  color: #555;
+/* 日期和地点样式 */
+.field--name-field-event-date,
+.field--name-field-venue {
+  font-size: 0.75rem; /* 原 0.85rem 缩小 */
+  color: #666;
+  display: block;
+  margin: 0.3rem 0;
 }
 
-/* 复选框样式 */
-.event-checkbox {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #3498db;
-  border-radius: 4px;
-  margin-right: 8px;
-  position: relative;
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-.event-checkbox:checked {
-  background-color: #3498db;
-}
-
-.event-checkbox:checked::after {
-  content: "✓";
+/* 查看更多链接样式 */
+/* 为 more-link 类添加墨蓝色填充边框样式 */
+.more-link {
   color: white;
-  position: absolute;
-  left: 2px;
-  top: -2px;
-  font-size: 14px;
+  background-color: rgb(0, 40, 114); 
+  border: 1px solid rgb(0, 40, 114); 
+  padding: 8px 15px; 
+  border-radius: 0; 
+  display: table; 
+  margin: 0 auto; 
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* 查看更多链接 */
-.view-more {
-  text-align: center;
-  margin-top: 30px;
+.more-link a {
+  color: white;
+  text-decoration: none; 
+  font-size: 0.7rem; /* 原 0.9rem 缩小 */
 }
 
-.view-more a {
-  color: #3498db;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  border-bottom: 1px dashed #3498db;
-  padding-bottom: 2px;
-  transition: all 0.2s;
+/* 鼠标悬停时的样式 */
+.more-link:hover {
+  background-color: white; 
+  color: rgb(0, 40, 114);
 }
 
-.view-more a:hover {
-  color: #2980b9;
-  border-bottom-style: solid;
+/* 日期前的圆点 */
+.field--name-field-event-date::before {
+  content: "•";
+  color: #999;
+  margin-right: 0.3rem;
 }
 
-/* 分类颜色变体 */
-.event-category.social { background-color: #e8f4fc; color: #2980b9; }
-.event-category.admission { background-color: #e8f8f0; color: #27ae60; }
-.event-category.alumni { background-color: #f9f0ff; color: #8e44ad; }
-.event-category.lecture { background-color: #fff0f0; color: #c0392b; }
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .recent-article-list__item {
+    width: calc(33.333% - 20px); /* 3项一排 */
+  }
+}
+
+@media (max-width: 768px) {
+  .recent-article-list__item {
+    width: calc(50% - 20px); /* 2项一排 */
+  }
+}
+
+@media (max-width: 480px) {
+  .recent-article-list__items {
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .recent-article-list__item {
+    width: 100%;
+    margin: 0 0 20px 0;
+    flex-direction: column; /* 小屏幕下恢复垂直排列 */
+  }
+  
+  .field--name-field-featured-image {
+    width: 70%; /* 小屏幕下图片容器宽度，可按需调整 */
+    height: 100px; /* 小屏幕下统一图片容器高度，可按需调整 */
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .field--name-field-featured-image img {
+    height: 100%; /* 确保图片填充容器高度 */
+  }
+  
+  .recent-article-list__item > div:not(.field--name-field-featured-image) {
+    padding-left: 0; /* 小屏幕下移除内容区域左边距 */
+  }
+}
+
+.small-teaser-event__title {
+  display: flex; /* 使用 flex 布局 */
+  align-items: center; /* 垂直居中对齐图片和文字 */
+  gap: 15px; /* 设置图片和文字之间的间距，可按需调整 */
+}
+
+.field--name-field-featured-image {
+  flex-shrink: 0; /* 防止图片容器缩小 */
+}
+
+.field--name-title {
+  flex-grow: 1; /* 让标题文字占据剩余空间 */
+}
