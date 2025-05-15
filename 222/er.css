@@ -12,8 +12,7 @@
 
 /* 主标题"Upcoming Events" */
 .block__title {
-  font-size: 24px; /* 缩小字号，可根据需求调整 */
-  font-weight: bold; 
+  font-size: 15px; /* 缩小字号，可根据需求调整 */
   color: #003366; 
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
@@ -21,6 +20,7 @@
   text-align: center;
   font-family: "Lora", "Noto Sans JP", serif; 
   line-height: 1; 
+  font-size: 25px; /* 可根据需求调整字号 */
 }
 
 /* 分类标签样式 */
@@ -110,6 +110,11 @@
   transition: transform 0.3s ease; /* 添加过渡效果，让放大过程更平滑 */
 }
 
+/* 鼠标悬停时“查看更多”链接添加下划线 */
+.more-link a:hover {
+  text-decoration: underline;
+}
+
 /* 鼠标悬停时图片内容放大 */
 .field--name-field-featured-image img:hover {
   transform: scale(1.1); /* 图片内容放大 10%，可按需调整 */
@@ -178,7 +183,7 @@
   color: white;
   background-color: rgb(0, 40, 114); 
   border: 1px solid rgb(0, 40, 114); 
-  padding: 8px 15px; 
+  padding: 6px 35px; 
   border-radius: 0; 
   display: table; 
   margin: 0 auto; 
@@ -316,3 +321,27 @@ body {
   height: 3px; /* 线的粗细 */
   background-color: #003366; /* 墨蓝色 */
 }
+
+* {
+    font-family: "Lora", "Noto Sans JP", serif;
+}
+
+/* 让日期和地点容器水平排列 */
+.small-teaser-event .field--name-field-event-date,
+.small-teaser-event .field--name-field-venue {
+    display: block;
+    margin-top: 10px; /* 让文字往下移动 10px，可按需调整 */
+    margin-right: 15px; /* 给两个元素之间添加一些间距 */
+}
+
+/* 鼠标悬停在标题文字时添加下划线 */
+.small-teaser-event__title .field--name-title:hover {
+  text-decoration: underline;
+}
+
+/* 鼠标悬停在标题文字时，对应图片放大 */
+.small-teaser-event__title .field--name-title:hover ~ .field--name-field-featured-image img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; /* 添加过渡效果，使放大更平滑 */
+}
+
