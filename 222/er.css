@@ -3,23 +3,24 @@
 /* 主容器 */
 .views-element-container.sectioning-block--ice-blue {
   background: white;
-  padding: 20px;
+  /* 减小内边距，这里改为 10px */
+  padding: 10px; 
   max-width: 1200px; 
   margin: 0 auto;
-  font-family: "Noto Sans JP", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /* 主标题"Upcoming Events" */
 .block__title {
-  font-size: 1.6rem; 
-  font-weight: 500; /* 修改字重 */
+  font-size: 24px; /* 缩小字号，可根据需求调整 */
+  font-weight: bold; 
   color: #003366; 
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e0e0e0;
   text-align: center;
-  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
-  line-height: 1.25; /* 添加行高 */
+  font-family: "Lora", "Noto Sans JP", serif; 
+  line-height: 1; 
 }
 
 /* 分类标签样式 */
@@ -67,73 +68,94 @@
 }
 
 /* 活动列表容器 - 改为横向排列 */
+/* 活动列表容器 - 改为允许换行排列 */
 .recent-article-list__items {
   list-style: none;
   padding: 0;
-  margin: 0 -10px; /* 补偿活动项的外边距 */
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  /* 允许换行 */
+  flex-wrap: wrap; 
   justify-content: flex-start;
+  /* 移除横向滚动条设置 */
+  /* overflow-x: auto;  */
 }
 
-/* 单个活动项 - 横向排列样式 */
+/* 单个活动项 - 调整宽度和间距 */
 .recent-article-list__item {
-  width: calc(25% - 20px); /* 4项一排，考虑间距 */
-  margin: 0 10px 25px; /* 左右间距10px，底部间距25px */
-  padding: 15px;
-  border: 1px solid #f0f0f0; /* 改为边框而非底部边框 */
-  border-radius: 4px;
-  display: flex; /* 使用 flex 布局 */
-  flex-direction: row; /* 让子元素横向排列 */
+  width: 25%; 
+  margin: 0; /* 确保外边距为 0 */
   box-sizing: border-box;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
 }
 
-/* 图片容器样式 */
+/* 图片容器样式，放大容器尺寸 */
 .field--name-field-featured-image {
-  width: 50px; /* 缩小图片容器宽度，可按需调整 */
-  height: 50px; /* 统一图片容器高度，可按需调整 */
-  margin-bottom: 0;
+  width: 65px; /* 原 50px，放大宽度 */
+  height: 65px; /* 原 50px，放大高度 */
+  margin: 0; /* 移除所有外边距 */
+  padding: 0; /* 移除所有内边距 */
   flex-shrink: 0;
+  overflow: hidden; /* 隐藏溢出的内容 */
 }
 
-/* 图片样式 */
+/* 图片样式，去除圆角 */
 .field--name-field-featured-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0; /* 原 4px，改成直角 */
   transition: transform 0.3s ease; /* 添加过渡效果，让放大过程更平滑 */
 }
 
-/* 鼠标悬停时图片放大 */
+/* 鼠标悬停时图片内容放大 */
 .field--name-field-featured-image img:hover {
-  transform: scale(1.1); /* 图片放大 10%，可按需调整 */
+  transform: scale(1.1); /* 图片内容放大 10%，可按需调整 */
 }
 
 /* 活动内容区域，包含分类标签、标题、日期和地点等 */
 .recent-article-list__item > div:not(.field--name-field-featured-image) {
   flex-grow: 1; /* 让内容区域占据剩余空间 */
-  padding-left: 15px; /* 给内容区域添加左边距，与图片隔开 */
+  padding-left: 10px; /* 给内容区域添加左边距，与图片隔开 */
 }
 
 /* 分类标签样式 */
 .field--name-field-category .field__item {
   /* 修改颜色为墨蓝色 */
   color: #003366; 
-  font-size: 0.8rem; /* 原 0.9rem 缩小 */
+  font-size: 0.8rem; /* 增大字体大小，原 0.8rem */
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
+  /* 统一字体 */
+  font-family: "Noto Sans JP", sans-serif;
+  margin-right: 5px; /* 添加右边距，可按需调整 */
+}
+
+/* 日期和地点样式 */
+.field--name-field-event-date,
+.field--name-field-venue {
+  font-size: 0.8rem; /* 增大字体大小，原 0.75rem */
+  color: #666;
+  display: block;
+  margin: 0.4rem 0;
+  /* 统一字体 */
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /* 活动标题样式 */
 .field--name-title {
-  font-size: 1.0rem; /* 原 1.1rem 缩小 */
-  line-height: 1.4;
-  color: #333;
-  margin-bottom: 0.8rem;
-  font-weight: normal;
-  flex-grow: 1; /* 让标题占据剩余空间 */
+  /* 统一字体 */
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px; /* 增大字体大小，原 13px */
+  font-weight: 1000; 
+  line-height: 1.54;
+  color: rgb(16, 18, 20);
+  /* 统一宽度，可根据实际情况调整 */
+  width: 200px; 
+  overflow-wrap: break-word; /* 允许长单词换行 */
 }
 
 /* 日期和地点容器 */
@@ -176,13 +198,6 @@
   color: rgb(0, 40, 114);
 }
 
-/* 日期前的圆点 */
-.field--name-field-event-date::before {
-  content: "•";
-  color: #999;
-  margin-right: 0.3rem;
-}
-
 /* 响应式设计 */
 @media (max-width: 1024px) {
   .recent-article-list__item {
@@ -198,19 +213,19 @@
 
 @media (max-width: 480px) {
   .recent-article-list__items {
-    flex-direction: column;
+    flex-direction: row; /* 保持横向排列 */
     margin: 0;
   }
   
   .recent-article-list__item {
-    width: 100%;
-    margin: 0 0 20px 0;
-    flex-direction: column; /* 小屏幕下恢复垂直排列 */
+    width: auto;
+    margin: 0 5px;
+    flex-direction: column;
   }
   
   .field--name-field-featured-image {
-    width: 70%; /* 小屏幕下图片容器宽度，可按需调整 */
-    height: 100px; /* 小屏幕下统一图片容器高度，可按需调整 */
+    width: 50px; 
+    height: 50px; 
     margin-bottom: 12px;
     margin-left: auto;
     margin-right: auto;
@@ -227,14 +242,77 @@
 
 .small-teaser-event__title {
   display: flex; /* 使用 flex 布局 */
-  align-items: center; /* 垂直居中对齐图片和文字 */
-  gap: 15px; /* 设置图片和文字之间的间距，可按需调整 */
+  gap: 20px; /* 设置图片和文字之间的间距，可按需调整 */
 }
 
 .field--name-field-featured-image {
   flex-shrink: 0; /* 防止图片容器缩小 */
 }
 
+/* 缩小活动标题宽度 */
 .field--name-title {
-  flex-grow: 1; /* 让标题文字占据剩余空间 */
+  color: rgb(16, 18, 20);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.54;
+  color: rgb(16, 18, 20);
+  width: 150px; /* 添加固定宽度，可根据实际情况调整*/
+  /* 或者使用 max-width 来保证文字过多时自动换行 */
+  /* max-width: 200px; */ 
+  overflow-wrap: break-word; /* 允许长单词换行 */
+  max-width: 200px;
+  font-weight: bold;
+}
+
+body {
+    /* 统一设置四个方向的外边距为 20px */
+    margin: 120px; 
+    /* 如果你想单独设置某个方向的外边距，可以使用以下属性 */
+    /* margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px; */
+}
+
+/* 加大并加粗 .block__title 类的文字 */
+.block__title {
+    font-size: 50px; /* 可根据需求调整字号 */
+    font-weight: bold; /* 加粗文字 */
+}
+
+
+/* 选择第一个活动项 */
+.recent-article-list__item:first-child {
+  position: relative; /* 为伪元素定位做准备 */
+  padding-top: 3px; /* 给线留出一些空间 */
+}
+
+/* 在第一个活动项上方添加墨蓝色的线 */
+.recent-article-list__item:first-child::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* 负数让线往上移动，可按需调整 */
+  left: 0;
+  /* 缩短线的右边，假设缩短 20px */
+  width: calc(100% - 20px); 
+  height: 3px; /* 线的粗细 */
+  background-color: #003366; /* 墨蓝色 */
+}
+
+/* 为前四个活动项添加顶部的线 */
+.recent-article-list__item:nth-child(-n+4) {
+  position: relative; /* 为伪元素定位做准备 */
+  padding-top: 3px; /* 给线留出一些空间 */
+}
+
+/* 在符合条件的活动项上方添加墨蓝色的线 */
+.recent-article-list__item:nth-child(-n+4)::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* 负数让线往上移动，可按需调整 */
+  left: 0;
+  /* 缩短线的右边，假设缩短 20px */
+  width: calc(100% - 20px); 
+  height: 3px; /* 线的粗细 */
+  background-color: #003366; /* 墨蓝色 */
 }
