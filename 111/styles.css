@@ -14,7 +14,7 @@ body {
     color: white;
     background-color: rgb(0, 40, 114); 
     border: 1px solid rgb(0, 40, 114); 
-    padding: 6px 35px; 
+    padding: 6px 45px; 
     border-radius: 0; 
     display: table; 
     margin: 20px auto 0; /* 增加 top 值，数值可按需调整 */
@@ -31,7 +31,8 @@ body {
     display: block; 
     margin-bottom: 2px; 
     color: #003366; 
-    font-weight: bold; 
+    /* 删除字体加粗样式 */
+    /* font-weight: bold; */ 
 }
 
 .news-item time {
@@ -39,6 +40,7 @@ body {
     margin-bottom: 2px; /* 添加底部外边距 */
     color: rgba(0, 0, 0, 0.6);
     font-weight: 300; /* 设置字体粗细，数值越小越细，可按需调整 */
+    font-size: 14px; /* 缩小字体大小 */
 }
 
 .news-list {
@@ -54,7 +56,7 @@ body {
     /* 调整宽度并计算边距，一行显示 4 个元素 */
     flex: 0 0 calc(25% - 12px); 
     box-sizing: border-box;
-    padding: 0 px;
+    padding: 0; /* 修正 padding 语法错误 */
     /* 左右边距共 10px */
     margin: 0 6px; 
 }
@@ -64,15 +66,17 @@ body {
   color: #003366;
   /* 让标题文本居中 */
   text-align: center;
-  /* 增大字体粗细和字号，这里将字重设为 700，字号设为 28px，你可按需调整 */
-  font: 700 28px / 1.25 "Lora", "Noto Sans JP", serif;
+  /* 删除字体加粗，将字重从 700 改为 400（正常字重） */
+  font: 400 28px / 1.25 "Lora", "Noto Sans JP", serif;
 }
 
 .news-title {
-    /* 设置较小的上边距，这里以 5px 为例，可按需调整 */
-    margin-top: 5px; 
-    /* 缩小字体大小，可根据需求修改该值 */
-    font-size: 16px; 
+    /* 减小字体粗细，400 是正常字体粗细，可按需调整 */
+    font-weight: 500; 
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .news-item::before {

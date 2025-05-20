@@ -12,15 +12,17 @@
 
 /* 主标题"Upcoming Events" */
 .block__title {
-  font-size: 15px; /* 缩小字号，可根据需求调整 */
+  font-size: 25px; 
+  margin-top: 0; /* 确保上边距为 0 */
   color: #003366; 
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e0e0e0;
   text-align: center;
   font-family: "Lora", "Noto Sans JP", serif; 
+  /* 设置字体不加粗 */
+  font-weight: normal; 
   line-height: 1; 
-  font-size: 25px; /* 可根据需求调整字号 */
 }
 
 /* 分类标签样式 */
@@ -36,35 +38,48 @@
 
 /* 活动标题样式 */
 .field--name-title {
-  font-size: 1.0rem; 
-  line-height: 1.25; /* 修改行高 */
-  color: #333;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 13px; /* 保留最终调整的字号 */
+  font-weight: bold;
+  line-height: 1.54;
+  color: rgb(16, 18, 20);
+  max-width: 200px; 
+  overflow-wrap: break-word; /* 允许长单词换行 */
   margin-bottom: 0.8rem;
-  font-weight: 500; /* 修改字重 */
   flex-grow: 1; 
-  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
 }
 
 /* 日期和地点样式 */
 .field--name-field-event-date,
 .field--name-field-venue {
-  font-size: 0.75rem; 
+  font-size: 0.75rem; /* 保留最终调整的字号 */
   color: #666;
   display: block;
   margin: 0.3rem 0;
-  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
-  font-weight: 500; /* 修改字重 */
-  line-height: 1.25; /* 添加行高 */
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500; 
+  line-height: 1.25; 
 }
 
 /* 查看更多链接样式 */
+.more-link {
+  color: white;
+  background-color: rgb(0, 40, 114); 
+  border: 1px solid rgb(0, 40, 114); 
+  padding: 6px 45px; 
+  border-radius: 0; 
+  display: table; 
+  margin: 20px auto 0; /* 增加 top 值，数值可按需调整 */
+  text-decoration: none; 
+}
+
 .more-link a {
-  color: white; 
+  color: white;
   text-decoration: none; 
   font-size: 0.7rem; 
-  font-family: "Lora", "Noto Sans JP", serif; /* 修改字体 */
-  font-weight: 500; /* 修改字重 */
-  line-height: 1.25; /* 添加行高 */
+  font-family: "Lora", "Noto Sans JP", serif; 
+  font-weight: 500; 
+  line-height: 1.25; 
 }
 
 /* 活动列表容器 - 改为横向排列 */
@@ -77,8 +92,6 @@
   /* 允许换行 */
   flex-wrap: wrap; 
   justify-content: flex-start;
-  /* 移除横向滚动条设置 */
-  /* overflow-x: auto;  */
 }
 
 /* 单个活动项 - 调整宽度和间距 */
@@ -93,12 +106,12 @@
 
 /* 图片容器样式，放大容器尺寸 */
 .field--name-field-featured-image {
-  width: 65px; /* 原 50px，放大宽度 */
-  height: 65px; /* 原 50px，放大高度 */
-  margin: 0; /* 移除所有外边距 */
-  padding: 0; /* 移除所有内边距 */
+  width: 65px; 
+  height: 65px; 
+  margin: 0; 
+  padding: 0; 
   flex-shrink: 0;
-  overflow: hidden; /* 隐藏溢出的内容 */
+  overflow: hidden; 
 }
 
 /* 图片样式，去除圆角 */
@@ -106,8 +119,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0; /* 原 4px，改成直角 */
-  transition: transform 0.3s ease; /* 添加过渡效果，让放大过程更平滑 */
+  border-radius: 0; 
+  transition: transform 0.3s ease; 
 }
 
 /* 鼠标悬停时“查看更多”链接添加下划线 */
@@ -117,84 +130,18 @@
 
 /* 鼠标悬停时图片内容放大 */
 .field--name-field-featured-image img:hover {
-  transform: scale(1.1); /* 图片内容放大 10%，可按需调整 */
+  transform: scale(1.1); 
 }
 
 /* 活动内容区域，包含分类标签、标题、日期和地点等 */
 .recent-article-list__item > div:not(.field--name-field-featured-image) {
-  flex-grow: 1; /* 让内容区域占据剩余空间 */
-  padding-left: 10px; /* 给内容区域添加左边距，与图片隔开 */
-}
-
-/* 分类标签样式 */
-.field--name-field-category .field__item {
-  /* 修改颜色为墨蓝色 */
-  color: #003366; 
-  font-size: 0.8rem; /* 增大字体大小，原 0.8rem */
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: block;
-  /* 统一字体 */
-  font-family: "Noto Sans JP", sans-serif;
-  margin-right: 5px; /* 添加右边距，可按需调整 */
-}
-
-/* 日期和地点样式 */
-.field--name-field-event-date,
-.field--name-field-venue {
-  font-size: 0.8rem; /* 增大字体大小，原 0.75rem */
-  color: #666;
-  display: block;
-  margin: 0.4rem 0;
-  /* 统一字体 */
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-/* 活动标题样式 */
-.field--name-title {
-  /* 统一字体 */
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px; /* 增大字体大小，原 13px */
-  font-weight: 1000; 
-  line-height: 1.54;
-  color: rgb(16, 18, 20);
-  /* 统一宽度，可根据实际情况调整 */
-  width: 200px; 
-  overflow-wrap: break-word; /* 允许长单词换行 */
+  flex-grow: 1; 
+  padding-left: 10px; 
 }
 
 /* 日期和地点容器 */
 .small-teaser-event__meta {
-  margin-top: auto; /* 将元信息推到底部 */
-}
-
-/* 日期和地点样式 */
-.field--name-field-event-date,
-.field--name-field-venue {
-  font-size: 0.75rem; /* 原 0.85rem 缩小 */
-  color: #666;
-  display: block;
-  margin: 0.3rem 0;
-}
-
-/* 查看更多链接样式 */
-/* 为 more-link 类添加墨蓝色填充边框样式 */
-.more-link {
-  color: white;
-  background-color: rgb(0, 40, 114); 
-  border: 1px solid rgb(0, 40, 114); 
-  padding: 6px 35px; 
-  border-radius: 0; 
-  display: table; 
-  margin: 0 auto; 
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.more-link a {
-  color: white;
-  text-decoration: none; 
-  font-size: 0.7rem; /* 原 0.9rem 缩小 */
+  margin-top: auto; 
 }
 
 /* 鼠标悬停时的样式 */
@@ -206,19 +153,19 @@
 /* 响应式设计 */
 @media (max-width: 1024px) {
   .recent-article-list__item {
-    width: calc(33.333% - 20px); /* 3项一排 */
+    width: calc(33.333% - 20px); 
   }
 }
 
 @media (max-width: 768px) {
   .recent-article-list__item {
-    width: calc(50% - 20px); /* 2项一排 */
+    width: calc(50% - 20px); 
   }
 }
 
 @media (max-width: 480px) {
   .recent-article-list__items {
-    flex-direction: row; /* 保持横向排列 */
+    flex-direction: row; 
     margin: 0;
   }
   
@@ -237,101 +184,71 @@
   }
   
   .field--name-field-featured-image img {
-    height: 100%; /* 确保图片填充容器高度 */
+    height: 100%; 
   }
   
   .recent-article-list__item > div:not(.field--name-field-featured-image) {
-    padding-left: 0; /* 小屏幕下移除内容区域左边距 */
+    padding-left: 0; 
   }
 }
 
 .small-teaser-event__title {
-  display: flex; /* 使用 flex 布局 */
-  gap: 20px; /* 设置图片和文字之间的间距，可按需调整 */
+  display: flex; 
+  gap: 20px; 
 }
 
 .field--name-field-featured-image {
-  flex-shrink: 0; /* 防止图片容器缩小 */
-}
-
-/* 缩小活动标题宽度 */
-.field--name-title {
-  color: rgb(16, 18, 20);
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.54;
-  color: rgb(16, 18, 20);
-  width: 150px; /* 添加固定宽度，可根据实际情况调整*/
-  /* 或者使用 max-width 来保证文字过多时自动换行 */
-  /* max-width: 200px; */ 
-  overflow-wrap: break-word; /* 允许长单词换行 */
-  max-width: 200px;
-  font-weight: bold;
+  flex-shrink: 0; 
 }
 
 body {
-    /* 统一设置四个方向的外边距为 20px */
-    margin: 120px; 
-    /* 如果你想单独设置某个方向的外边距，可以使用以下属性 */
-    /* margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px; */
+  margin: 0 200px; /* 将左右边距设置为和 styles.css 一致 */
 }
-
-/* 加大并加粗 .block__title 类的文字 */
-.block__title {
-    font-size: 50px; /* 可根据需求调整字号 */
-    font-weight: bold; /* 加粗文字 */
-}
-
 
 /* 选择第一个活动项 */
 .recent-article-list__item:first-child {
-  position: relative; /* 为伪元素定位做准备 */
-  padding-top: 3px; /* 给线留出一些空间 */
+  position: relative; 
+  padding-top: 3px; 
 }
 
 /* 在第一个活动项上方添加墨蓝色的线 */
 .recent-article-list__item:first-child::before {
   content: "";
   position: absolute;
-  top: -10px; /* 负数让线往上移动，可按需调整 */
+  top: -10px; 
   left: 0;
-  /* 缩短线的右边，假设缩短 20px */
   width: calc(100% - 20px); 
-  height: 3px; /* 线的粗细 */
-  background-color: #003366; /* 墨蓝色 */
+  height: 3px; 
+  background-color: #003366; 
 }
 
 /* 为前四个活动项添加顶部的线 */
 .recent-article-list__item:nth-child(-n+4) {
-  position: relative; /* 为伪元素定位做准备 */
-  padding-top: 3px; /* 给线留出一些空间 */
+  position: relative; 
+  padding-top: 3px; 
 }
 
 /* 在符合条件的活动项上方添加墨蓝色的线 */
 .recent-article-list__item:nth-child(-n+4)::before {
   content: "";
   position: absolute;
-  top: -5px; /* 负数让线往上移动，可按需调整 */
+  top: -5px; 
   left: 0;
-  /* 缩短线的右边，假设缩短 20px */
   width: calc(100% - 20px); 
-  height: 3px; /* 线的粗细 */
-  background-color: #003366; /* 墨蓝色 */
+  height: 3px; 
+  background-color: #003366; 
 }
 
 * {
-    font-family: "Lora", "Noto Sans JP", serif;
+  font-family: "Lora", "Noto Sans JP", serif;
 }
 
 /* 让日期和地点容器水平排列 */
 .small-teaser-event .field--name-field-event-date,
 .small-teaser-event .field--name-field-venue {
-    display: block;
-    margin-top: 10px; /* 让文字往下移动 10px，可按需调整 */
-    margin-right: 15px; /* 给两个元素之间添加一些间距 */
+  display: block;
+  margin-top: 10px; 
+  margin-right: 15px; 
 }
 
 /* 鼠标悬停在标题文字时添加下划线 */
@@ -342,6 +259,6 @@ body {
 /* 鼠标悬停在标题文字时，对应图片放大 */
 .small-teaser-event__title .field--name-title:hover ~ .field--name-field-featured-image img {
   transform: scale(1.1);
-  transition: transform 0.3s ease; /* 添加过渡效果，使放大更平滑 */
+  transition: transform 0.3s ease; 
 }
 
