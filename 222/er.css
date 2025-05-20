@@ -63,17 +63,183 @@
 
 /* 查看更多链接样式 */
 .more-link {
+  position: relative;
   color: white;
   background-color: rgb(0, 40, 114); 
   border: 1px solid rgb(0, 40, 114); 
   padding: 6px 45px; 
   border-radius: 0; 
   display: table; 
-  margin: 20px auto 0; /* 增加 top 值，数值可按需调整 */
+  margin: 20px auto 0; 
   text-decoration: none; 
+  z-index: 1; 
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.more-link a {
+/* 用于实现填充效果的伪元素 */
+.more-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: white; 
+  transition: width 0.3s ease; 
+  transform: translateX(-50%); 
+  z-index: -1; 
+}
+
+.more-link:hover::before {
+  width: 100%; 
+}
+
+.more-link:hover {
+  color: rgb(0, 40, 114); 
+}
+
+/* 模拟顶部和底部边框 */
+.more-link::after,
+.more-link span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: rgb(0, 40, 114);
+  transition: all 0.3s ease;
+}
+
+.more-link::after {
+  top: 0;
+  left: 50%;
+}
+
+.more-link span::before {
+  bottom: 0;
+  right: 50%;
+}
+
+/* 模拟左侧和右侧边框 */
+.more-link span::after,
+.more-link span div::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 0;
+  background-color: rgb(0, 40, 114);
+  transition: all 0.3s ease;
+}
+
+.more-link span::after {
+  top: 50%;
+  left: 0;
+}
+
+.more-link span div::before {
+  bottom: 50%;
+  right: 0;
+}
+
+/* 悬停时边框展开 */
+.more-link:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.more-link:hover span::before {
+  right: 0;
+  width: 100%;
+}
+
+.more-link:hover span::after {
+  top: 0;
+  height: 100%;
+}
+
+.more-link:hover span div::before {
+  bottom: 0;
+  height: 100%;
+}
+
+.more-link span {
+  display: block;
+  position: relative;
+}
+
+.more-link span div {
+  display: block;
+  position: relative;
+}
+
+.more-link span a {
+  color: inherit; 
+  text-decoration: none; 
+  font-size: 0.7rem; 
+  font-family: "Lora", "Noto Sans JP", serif; 
+  font-weight: 500; 
+  line-height: 1.25; 
+}
+
+/* 模拟顶部和底部边框 */
+.more-link::before,
+.more-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 1px; /* 和原边框宽度保持一致 */
+  background-color: rgb(0, 40, 114); /* 使用原边框颜色 */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.more-link::before {
+  top: 0;
+}
+
+.more-link::after {
+  bottom: 0;
+}
+
+/* 模拟左右边框 */
+.more-link span::before,
+.more-link span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1px; /* 和原边框宽度保持一致 */
+  height: 0;
+  background-color: rgb(0, 40, 114); /* 使用原边框颜色 */
+  transition: height 0.3s ease, top 0.3s ease;
+}
+
+.more-link span::before {
+  left: 0;
+}
+
+.more-link span::after {
+  right: 0;
+}
+
+/* 悬停状态 */
+.more-link:hover::before,
+.more-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.more-link:hover span::before,
+.more-link:hover span::after {
+  height: 100%;
+  top: 0;
+}
+
+.more-link span {
+  display: block;
+  position: relative;
+}
+
+.more-link span a {
   color: white;
   text-decoration: none; 
   font-size: 0.7rem; 
