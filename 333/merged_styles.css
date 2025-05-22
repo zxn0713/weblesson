@@ -20,7 +20,7 @@ body {
 .block__title {
   font-size: 25px; 
   margin-top: 0;
-  color: #003366; 
+  color: rgb(0, 40, 114);  
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e0e0e0;
@@ -31,7 +31,7 @@ body {
 }
 
 .field--name-field-category .field__item {
-  color: #003366; 
+  color: rgb(0, 40, 114);  
   font-size: 0.8rem; 
   font-weight: 500; 
   margin-bottom: 0.5rem;
@@ -111,10 +111,26 @@ body {
   transition: transform 0.3s ease; 
 }
 
-/* 添加悬停效果 */
-.field--name-field-featured-image img:hover {
-  transform: scale(1.1); 
+/* 合并悬停效果 */
+.small-teaser-event__title:hover .field--name-title {
+  text-decoration: underline;
 }
+
+.small-teaser-event__title:hover .field--name-field-featured-image img {
+  transform: scale(1.1);
+}
+
+/* 移除原有的单独悬停效果 */
+/*
+.small-teaser-event__title .field--name-title:hover {
+  text-decoration: underline;
+}
+
+.small-teaser-event__title .field--name-title:hover ~ .field--name-field-featured-image img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; 
+}
+*/
 
 .small-teaser-event__meta {
   margin-top: auto; 
@@ -132,7 +148,7 @@ body {
   left: 0;
   width: calc(100% - 20px); 
   height: 3px; 
-  background-color: #003366; 
+  background-color: rgb(0, 40, 114); ; 
 }
 
 .small-teaser-event .field--name-field-event-date,
@@ -159,7 +175,7 @@ body {
 }
 
 .section-title {
-  color: #003366;
+  color: rgb(0, 40, 114); ;
   text-align: center;
   font: 400 28px / 1.25 "Lora", "Noto Sans JP", serif;
 }
@@ -184,7 +200,7 @@ body {
   content: "";
   display: block;
   height: 3px; 
-  background-color: #003366; 
+  background-color: rgb(0, 40, 114); ; 
   margin-bottom: 10px; 
 }
 
@@ -199,7 +215,7 @@ body {
 .news-category {
   display: block; 
   margin-bottom: 2px; 
-  color: #003366; 
+  color: rgb(0, 40, 114); 
 }
 
 .news-title {
