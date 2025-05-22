@@ -20,7 +20,41 @@ body {
 .block__title {
   font-size: 25px; 
   margin-top: 0;
-  color: rgb(0, 40, 114);  
+  color: rgb(0, 40, 114);  .more-link {
+  position: relative;
+  color: white;
+  background-color: rgb(0, 40, 114); 
+  border: 1px solid rgb(0, 40, 114); 
+  padding: 10px 60px; 
+  border-radius: 0; 
+  display: table; 
+  margin: 20px auto 0; 
+  text-decoration: none; 
+  z-index: 1; 
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.more-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: white; 
+  transition: width 0.3s ease; 
+  transform: translateX(-50%); 
+  z-index: -1; 
+}
+
+.more-link:hover::before {
+  width: 100%; 
+}
+
+.more-link:hover {
+  color: rgb(0, 40, 114); 
+}
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #e0e0e0;
@@ -231,6 +265,13 @@ body {
 }
 
 /* 查看更多链接样式 */
+.middle-line {
+    width: 100%; /* 细线宽度占满父容器 */
+    height: 1px; /* 细线高度 */
+    background-color: #ccc; /* 细线颜色，可按需修改 */
+    margin: 30px 0; /* 上下外边距，可按需调整 */
+}
+
 .more-link {
   position: relative;
   color: white;
