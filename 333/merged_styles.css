@@ -79,6 +79,8 @@ body {
   display: flex; 
   flex-direction: column; 
   justify-content: space-between; 
+  /* 新增统一高度 */
+  height: 200px; /* 可根据实际情况调整 */
 }
 
 .field--name-field-featured-image {
@@ -90,6 +92,17 @@ body {
   overflow: hidden; 
 }
 
+.recent-article-list__item > div:not(.field--name-field-featured-image) {
+  flex-grow: 1; 
+  padding-left: 5px; 
+}
+
+.small-teaser-event__title {
+  display: flex; 
+  gap: 10px; 
+  margin-right: 15px;
+}
+
 .field--name-field-featured-image img {
   width: 100%;
   height: 100%;
@@ -98,28 +111,13 @@ body {
   transition: transform 0.3s ease; 
 }
 
-.recent-article-list__item > div:not(.field--name-field-featured-image) {
-  flex-grow: 1; 
-  padding-left: 10px; 
+/* 添加悬停效果 */
+.field--name-field-featured-image img:hover {
+  transform: scale(1.1); 
 }
 
 .small-teaser-event__meta {
   margin-top: auto; 
-}
-
-.recent-article-list__item:first-child {
-  position: relative; 
-  padding-top: 3px; 
-}
-
-.recent-article-list__item:first-child::before {
-  content: "";
-  position: absolute;
-  top: -10px; 
-  left: 0;
-  width: calc(100% - 20px); 
-  height: 3px; 
-  background-color: #003366; 
 }
 
 .recent-article-list__item:nth-child(-n+4) {
@@ -217,8 +215,7 @@ body {
 }
 
 /* 查看更多链接样式 */
-.more-link,
-.views-element-container .more-link { /* 新增选择器，让活动部分的查看更多也应用该样式 */
+.more-link {
   position: relative;
   color: white;
   background-color: rgb(0, 40, 114); 
@@ -233,8 +230,7 @@ body {
   overflow: hidden;
 }
 
-.more-link::before,
-.views-element-container .more-link::before {
+.more-link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -247,102 +243,20 @@ body {
   z-index: -1; 
 }
 
-.more-link::after,
-.more-link span::before,
-.views-element-container .more-link::after,
-.views-element-container .more-link span::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 1px;
-  background-color: rgb(0, 40, 114);
-  transition: all 0.3s ease;
-}
-
-.more-link::after,
-.views-element-container .more-link::after {
-  top: 0;
-  left: 50%;
-}
-
-.more-link span::before,
-.views-element-container .more-link span::before {
-  bottom: 0;
-  right: 50%;
-}
-
-.more-link span::after,
-.more-link span div::before,
-.views-element-container .more-link span::after,
-.views-element-container .more-link span div::before {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 0;
-  background-color: rgb(0, 40, 114);
-  transition: all 0.3s ease;
-}
-
-.more-link span::after,
-.views-element-container .more-link span::after {
-  top: 50%;
-  left: 0;
-}
-
-.more-link span div::before,
-.views-element-container .more-link span div::before {
-  bottom: 50%;
-  right: 0;
-}
-
-.more-link:hover::before,
-.views-element-container .more-link:hover::before {
+.more-link:hover::before {
   width: 100%; 
 }
 
-.more-link:hover,
-.views-element-container .more-link:hover {
+.more-link:hover {
   color: rgb(0, 40, 114); 
 }
 
-.more-link:hover::after,
-.views-element-container .more-link:hover::after {
-  left: 0;
-  width: 100%;
-}
-
-.more-link:hover span::before,
-.views-element-container .more-link:hover span::before {
-  right: 0;
-  width: 100%;
-}
-
-.more-link:hover span::after,
-.views-element-container .more-link:hover span::after {
-  top: 0;
-  height: 100%;
-}
-
-.more-link:hover span div::before,
-.views-element-container .more-link:hover span div::before {
-  bottom: 0;
-  height: 100%;
-}
-
-.more-link span,
-.views-element-container .more-link span {
+.more-link span {
   display: block;
   position: relative;
 }
 
-.more-link span div,
-.views-element-container .more-link span div {
-  display: block;
-  position: relative;
-}
-
-.more-link span a,
-.views-element-container .more-link span a {
+.more-link span a {
   color: inherit; 
   text-decoration: none; 
   font-size: 0.7rem; 
@@ -351,44 +265,71 @@ body {
   line-height: 1.25; 
 }
 
+/* 从 er.css 过来的样式（确保无重复后保留） */
+.event-item-container {
+  display: flex;
+  align-items: center;
+}
+
+.event-text-content {
+  flex: 1;
+}
+
 /* 响应式设计 */
 @media (max-width: 1024px) {
   .recent-article-list__item {
-      width: calc(33.333% - 20px); 
+    width: calc(33.333% - 20px); 
   }
 }
 
 @media (max-width: 768px) {
   .recent-article-list__item {
-      width: calc(50% - 20px); 
+    width: calc(50% - 20px); 
   }
 }
 
 @media (max-width: 480px) {
   .recent-article-list__items {
-      flex-direction: row; 
-      margin: 0;
+    flex-direction: row; 
+    margin: 0;
   }
   
   .recent-article-list__item {
-      width: auto;
-      margin: 0 5px;
-      flex-direction: column;
+    width: auto;
+    margin: 0 5px;
+    flex-direction: column;
   }
   
   .field--name-field-featured-image {
-      width: 50px; 
-      height: 50px; 
-      margin-bottom: 12px;
-      margin-left: auto;
-      margin-right: auto;
+    width: 50px; 
+    height: 50px; 
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .field--name-field-featured-image img {
-      height: 100%; 
+    height: 100%; 
   }
   
   .recent-article-list__item > div:not(.field--name-field-featured-image) {
-      padding-left: 0; 
+    padding-left: 0; 
   }
+}
+
+/* 新添加的容器样式 */
+.event-image-title-container {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+}
+
+/* 图片容器样式，可根据需要调整间距 */
+.field.field--name-field-featured-image {
+  margin-right: 10px; /* 图片和标题之间的间距 */
+}
+
+.image-text-container {
+  display: flex; 
+  align-items: center; 
+  gap: 5px; 
 }
