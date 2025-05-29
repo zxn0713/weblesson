@@ -1,4 +1,4 @@
-/* 全局样式 */
+.zxn{
 * {
   font-family: "Lora", "Noto Sans JP", serif;
 }
@@ -6,6 +6,7 @@
 body {
   margin-left: 15px;
   margin-right: 15px;
+  background-color: #cad3ca; 
 }
 
 /* 活动部分样式 */
@@ -389,4 +390,5 @@ body {
   display: flex; 
   align-items: center; 
   gap: 5px; 
+}
 }

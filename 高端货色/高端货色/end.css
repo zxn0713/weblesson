@@ -1,0 +1,1638 @@
+.body{
+  margin:0px;
+  padding:0px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+.xyj {
+    all: initial; /* 重置所有属性到初始值 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.html{
+    background-color: #00205b;
+    margin: 0;
+    margin: 0;
+}
+html[lang="en"] {
+    margin: 0;
+    padding: 0;
+    height: 200;
+}
+header{
+    box-shadow: 0 16px 0 rgba(0, 19, 55, 0.5);
+    width: 100%;
+    background-color:#00205b ;
+    margin: 0;
+}
+.body {
+    color: #101214;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 13px;
+    line-height: 1.54;
+    margin: 0 ;
+}
+.all{
+    background-color: #00205b;
+    height: 200px;
+    margin: 0 128.5px;
+    
+}
+.left1{
+    display: flex;
+    align-items: center;  /* 垂直居中 */
+    justify-content: center;  /* 水平居中 */
+    background-color: #ffffff;
+    width: 153px;
+    height: 216px;
+    flex-shrink: 0;
+    order:1;
+    position: relative;
+}
+.left2{
+    width: 340px;
+    height: 58.61px;
+    order:2;
+    display: flex;
+    position: relative;  /* 相对定位 */
+    left: 153px;         /* 向右移动 left1 的宽度 */
+    top: -50%;    
+    margin-top: -85px; /* 向上移动30像素 */
+    position: relative; /* 确保定位生效 */
+    margin-left: 30px;
+}
+.left4{
+    border-top: 0.4px solid rgba(178, 187, 205, 0.5); /* 半透明分割线 */
+    color: #ffffff;
+    padding : 0px 32px; /* 上下内边距 */
+    width:1151px;
+    height: 93px;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    position: relative; /* 相对定位 */;
+    top: -80px;
+    left: 188px; /* 向右移动40px */
+    /*position: relative; 
+    padding-right: 20px; /* 右内边距 ;
+    margin: 0;
+    justify-content: space-around;*/
+    position: relative; /* 唯一需要的定位 */
+    padding: 0 32px;
+    height: 93px;
+    display: flex;
+    align-items: center;
+}
+.left4 span {
+    font-size: 16px; /* 字体大小 */
+    padding: 0 20px; /* 内边距 */
+    letter-spacing: 2px; /* 增大字间距，可根据需求调整数值 */
+}
+
+.left4 span:hover {
+    color: #b28d3a;
+}
+
+.hide1 {
+    /*background-color: rgba(16, 18, 20, 0.93);
+    height: 128px; 
+    width: 1151px; 
+    position: absolute;
+    top: 86px; 
+    left: 0px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap; 
+    /*display: none;*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    background: rgba(16,18,20,0.93);
+    z-index: 1000;
+    padding: 20px;
+}
+.hide1 span {
+    width: 346.33px; /* 宽度 */;
+    height: 34px; /* 高度 */
+    width: calc(33.33% - 10px); /* 每行三个，减去间距 */
+    margin: 0 20px; /* 间距 */
+    box-sizing: border-box;
+    text-align: center; /* 文字居中 */
+    letter-spacing: 5px; /* 增大字间距，可根据需求调整数值 */
+}
+
+.hide1 span:hover {
+    color: #b28d3a; /* 悬停变色 */
+    transform: translateY(-5px); /* 鼠标悬停时向上移动 */
+}
+.left4:hover .hide1 {
+    display: block;  /* 鼠标悬停时显示 */
+}
+.header-right {
+    display: flex;
+    justify-content: flex-end; /* 右对齐 */
+    margin-top:-285px;               /* 紧贴顶部 */
+    text-align: center;  /* 文本居中 */
+}
+.right1{
+    color: #b2bbcd;
+    height: 33px;
+    font-size: 11px; /* 字体大小 */
+    align-items: center;  /* 垂直居中 */
+    justify-content: center;  /* 水平居中 */
+    display: flex; /* 使用 Flexbox 布局 */
+}
+.right1 a{
+    margin: 0 0 0 32px;
+}
+.right1 a:hover{
+    color: #b28d3a;
+}
+.right2{
+    background-color: #001337;
+    width: 59px;
+    height: 39px;
+    margin-right: 3px;
+    font-size:24px;
+    margin-left: 15px;
+}
+.right3 a {
+    display: block;  /* 使a标签可以设置宽高 */
+    width: 162px;
+    height: 44px;
+    background-color: #001337; /* 黑色背景 */
+    line-height: 44px;     /* 垂直居中文字 */
+    text-align: center;    /* 水平居中文字 */
+    text-decoration: none; /* 去除下划线 */
+    color: #b2bbcd;
+    margin: 0;
+    display: none;
+}
+
+.right3 p{
+    width: 162px;
+    height: 39px;
+    text-align: center; /* 文字居中 */
+    background-color: #001337; /* 背景颜色 */
+    color: #b2bbcd; /* 文字颜色 */;
+    align-items: center;  /* 垂直居中 */
+    justify-content: center;  /* 水平居中 */
+    display: flex; /* 使用 Flexbox 布局 */
+}
+.right3:hover {
+    background-color: #27406d; /* 鼠标悬停时的背景色 */
+}
+.header-right2 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 15px;
+    height: 32px;
+}
+.right4{
+    color: #b2bbcd; 
+    display: flex;
+    justify-content: flex-end;
+    gap:32px;
+    flex-direction: row;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row; /* 水平排列 */
+    align-items: center;
+    gap: 20px; /* 替代margin的间距控制 */
+    margin: 0; /* 清除原有margin */
+    padding: 0;
+    white-space: nowrap; /* 防止换行 */
+}
+.right4 a{
+    margin: 0px 0 0 32px;
+}
+.right4 a:hover{
+    color: #b28d3a;
+}
+.right4 a, .right4 li {
+    display: inline-flex;
+}
+.right5{
+    background-color: #d9dbde;
+    color: #00205b;
+    width: 100px;
+    height: 32px;
+    margin: 0px 0 0 32px;
+    display: inline-flex;
+    justify-content: flex-end;
+    justify-content:center;
+    margin: 0; /* 只保留左侧间距 */
+    padding: 0 15px;
+    white-space: nowrap;
+}
+
+.hide1 {
+    background-color: rgba(16, 18, 20, 0.93);
+    height: 128px; /* 高度 */
+    width: 1151px; /* 宽度 */;
+    position: absolute;
+    top: 86px; /* 位于left4下方 */
+    left: 0px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    display: none;
+}
+.hide1 span {
+    width: 346.33px; /* 宽度 */;
+    height: 34px; /* 高度 */;
+    width: calc(33.33% - 10px); /* 每行三个，减去间距 */
+    margin: 15px; /* 间距 */
+    box-sizing: border-box;
+}
+.div{
+    all: initial;
+    /* 或者更具体的重置 */
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+}
+.qyy {
+  * {
+    font-family: "Lora", "Noto Sans JP", serif;
+  }
+    /*all: initial;  重置所有属性到初始值 */
+    background-color: rgb(16,18,20,0.15);
+   .sectent{
+   font-family: Yu Gothic Medium;
+   font-size: 1.7em;
+   display: block;/*让元素以块级元素的方式显示*/
+   font-weight:normal;/*设置字体粗细*/;
+   color: rgb(255,255,255);
+   margin-top:0px;
+   margin-bottom: 0px;
+   position: relative;
+   top:-155px ;
+   left: 213px;
+   width: 793px;
+}
+.box{
+  /*padding-top: 12px;
+  padding-bottom: 10px;*/
+  height: 87px;
+  width: 96.4vw;
+ /* background-color: #165eb1(22, 94, 177, 0.5);  /* 设置蓝色背景，透明度为 0.5 */
+  background-color: rgba(0, 19, 55, 0.6);  /* 设置蓝色背景，透明度为 0.6 */
+  position: relative;
+  top:-87px;
+  left: 0;
+}
+.sectent1{
+  font-family:Lora, "Lora Medium";
+  color: rgb(0,32,91);
+  display: block;/*让元素以块级元素的方式显示*/ 
+  /*font-weight:bold;
+  font-size: 24px;*/
+  /*border-left-color: rgb(0,32,91);
+  border-top-color: rgb(0,32,91);
+  border-right-color: rgb(0,32,91);*/
+  position: relative;
+  top:-85px;
+  left: 660px;
+  font-size: 2em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 330px;
+  font-weight: normal;
+}
+html{
+  background-color: rgb(16,18,20,0.15);
+}
+body{
+ width: 1500px;
+}
+.bigbox{
+  width: 1300px;
+  height: 90px;
+  background-color: rgb(255,255,255);
+  display: block;
+  position: relative;
+  top:-50px;
+  left: 130px;
+  margin-bottom: 0px;
+}
+.bigbox1{
+  width: 1300px;
+  height: 90px;
+  background-color: rgb(255,255,255);
+  display: block;
+  position: relative;
+  left: 130px;
+  top:-35px;
+  margin-bottom: 0px;
+}
+.littlebox{
+  width: 115px;
+  height: 28px;
+  background-color: rgb(0,32,91); 
+  position: relative;
+  top: -195px;
+  left: 180px;
+  white-space: nowrap;/*不换行*/;
+}
+.littlebox1{
+  width: 115px;
+  height: 28px;
+  background-color: rgb(0,32,91); 
+  position: relative;
+  top: -120px;
+  left: 180px;
+  white-space: nowrap;/*不换行*/;
+}
+span{
+  color: rgb(255,255,255);
+  font-family: "Noto Sans JP";
+  font-size: 13px;
+}
+time{
+  color: rgb(63,65,69);
+  /*display:inline;*/
+  font-size: small;
+}
+.date{
+  position: relative;
+  left: 78px; 
+}
+.date1{
+  position: relative;
+  left: 38px;
+}
+.notice{
+  position: relative;
+  /*top:1px;*/
+  left:32px;
+}
+.notice1{
+  position: relative;
+  top:2px;
+  left:12px; 
+}
+.article{
+  color: rgb(0,0,0);
+  font-size: 0.98em;
+  position: relative;
+  left: 90px;
+}
+.article1{
+  color: rgb(0,0,0);
+  font-size: 0.98em;
+  position: relative;
+  left: 48px; 
+}
+a{
+ color: rgb(0,0,0);
+ text-decoration: none; /* 去掉下划线 */
+}
+a:hover{
+  color: rgb(0,0,0);
+  text-decoration: underline; /* 鼠标悬停时显示下划线 */;
+}
+a.image{
+  position: relative;
+  display:inline-block;
+  /*overflow: hidden;             /* 隐藏溢出部分 */
+  text-decoration: none;/*去掉下划线*/
+  width: 96.4vw;
+  height:68vh;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+a.image::after{
+  content: "";/*伪元素的内容为空*/
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68vh;
+  /*box-shadow:inset 0 0 20px 500px rgb(0, 32, 91, 0.3);/*阴影效果*/
+  background: rgba(0,32,91,0.1); 
+  opacity: 0;/*初始时隐藏*/
+  /*transition: opacity 0.3s ease;/*过渡效果*/
+  pointer-events:none;/*鼠标事件*/
+  z-index: 1;
+ /* background: transparent;*/
+}
+ a.image:hover::after{
+  opacity: 1;/*鼠标悬停时显示*/
+}
+
+a.image img{
+  width: 100%;
+  /*position: relative;
+  box-sizing: border-box;*/
+  display: block;
+  height: 100%;
+  /*object-fit: cover;/*保持图片比例不变，填充整个容器*/
+  /*transition: box-shadow 0.3s ease;/*过渡效果*/
+  /*box-shadow:inset 0 0 20px 500px rgb(0, 32, 91, 0.3);*/
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+
+.leftjt, .rightjt {
+  position: relative;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  transition: all 0.2s;
+  display: inline-block;
+  cursor: pointer;
+    z-index: 1000;
+    max-width: 100vw;
+    max-height: 100vh;
+    pointer-events: auto;
+}
+.leftjt {
+  position: relative;
+  left: 1160px;
+  top: -450px;
+  transform:  rotate(-135deg);
+}
+.rightjt {
+  position: relative;
+  right: -1370px;
+  top: -450px;
+  transform:  rotate(45deg);
+  }
+    /* 悬停效果 */
+    .leftjt:hover {
+      border-color: #ccc;
+    }
+    .rightjt:hover {
+      border-color: #ccc;
+    }
+    /* 定义方块的目标状态 */
+:target ~ .square-wrapper .square1,
+:target ~ .square-wrapper .square2,
+:target ~ .square-wrapper .square3,
+:target ~ .square-wrapper .square4,
+:target ~ .square-wrapper .square5 {
+  background-color: white; /* 默认恢复白色 */
+}
+/* 左箭头点击效果 */
+#left:target ~ .square-wrapper:nth-child(3) .square1,
+#left:target ~ .square-wrapper:nth-child(4) .square2,
+#left:target ~ .square-wrapper:nth-child(5) .square3,
+#left:target ~ .square-wrapper:nth-child(6) .square4,
+#left:target ~ .square-wrapper:nth-child(7) .square5 {
+  background-color: rgb(222,169,90);
+}
+/* 右箭头点击效果 */
+#right:target ~ .square-wrapper:nth-child(3) .square1,
+#right:target ~ .square-wrapper:nth-child(4) .square2,
+#right:target ~ .square-wrapper:nth-child(5) .square3,
+#right:target ~ .square-wrapper:nth-child(6) .square4,
+#right:target ~ .square-wrapper:nth-child(7) .square5 {
+  background-color: rgb(222,169,90);
+}
+  .square1,.square2,.square3,.square4,.square5{
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255,255,255);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none; /* 去掉默认的焦点外框 */;
+  }
+  .square-wrapper {
+    display: inline-block; /* 防止label换行 */
+    position: relative;
+
+  }
+
+/* 悬停效果 */
+.square-wrapper:hover .square1,
+.square-wrapper:hover .square2,
+.square-wrapper:hover .square3,
+.square-wrapper:hover .square4,
+.square-wrapper:hover .square5 {
+  background-color: rgb(200, 200, 200);
+}
+/* 隐藏复选框 */
+.square-checkbox {
+  position: fixed;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  /*left: -9999px;*/
+/* 单选按钮样式 */
+}
+/* 当label获得焦点时变黄 */
+.square-wrapper:focus-within .square1,
+.square-wrapper:focus-within .square2,
+.square-wrapper:focus-within .square3,
+.square-wrapper:focus-within .square4,
+.square-wrapper:focus-within .square5 {
+  background-color: rgb(222,169,90);
+}
+
+/* 点击其他区域时恢复白色（通过html的点击事件） */
+html:active .square-wrapper:not(:active):not(:focus-within) .square1,
+html:active .square-wrapper:not(:active):not(:focus-within) .square2,
+html:active .square-wrapper:not(:active):not(:focus-within) .square3,
+html:active .square-wrapper:not(:active):not(:focus-within) .square4,
+html:active .square-wrapper:not(:active):not(:focus-within) .square5 {
+  background-color: white;
+}
+
+.square1{
+  /*width: 12px;
+  height: 12px; 
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -800px;
+  left: 1170px;
+}
+.square2{
+  /*width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -800px;
+  left: 1217px;
+}
+.square3{
+  /*width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -800px;
+  left: 1230px;
+}
+.square4{
+ /* width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -800px;
+  left: 1240px;
+}
+.square5{
+  /*width: 12px;
+  height: 12px;
+  background-color: rgb(255,255,255);
+  position: relative;*/
+  top: -800px;
+  left: 1135px;
+}
+.container {
+  position: relative;
+  top: -465px;
+  left: 1335px;
+  margin: 0px;
+  width: 50px;
+}
+
+.play-pause-btn {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.state-toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+.play-icon, .pause-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.play-icon {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid rgba(184, 178, 178, 0.484);
+  margin-left: 2px;
+  
+}
+
+.pause-icon {
+  opacity: 0;
+  display: flex;
+  gap: 8px;
+
+}
+
+.bar {
+  width: 4px;
+  height: 15px;
+  background-color: rgba(184, 178, 178, 0.484);
+}
+
+.state-toggle:checked ~ .play-icon {
+  opacity: 0;
+}
+
+.state-toggle:checked ~ .pause-icon {
+  opacity: 1;
+}
+
+.play-pause-btn:hover {
+  transform: scale(1.05);
+}
+
+.play-pause-btn:active {
+  transform: scale(0.95);
+}
+.sanjiao {
+  width:0px ;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 5px solid rgb(222,169,90); /* 三角形颜色 */
+  transform: rotate(90deg); /* 关键旋转属性 */
+  transform-origin: center; /* 旋转中心点 */
+  position: relative;
+  top: -486px;
+  left: 156px;
+}
+.juxing{
+  width: 50px;
+  height: 13.8px;
+  background-color: rgb(222,169,90);
+  position: relative;
+  top: -495px;
+  left: 112px;
+}
+}
+.zxn{
+  * {
+    font-family: "Lora", "Noto Sans JP", serif;
+  }
+  
+body {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  /* 活动部分样式 */
+  .views-element-container.sectioning-block--ice-blue {
+    background: white;
+    padding: 10px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  
+  .block__title {
+    font-size: 25px; 
+    margin-top: 0;
+    color: rgb(0, 40, 114);  .more-link {
+    position: relative;
+    color: white;
+    background-color: rgb(0, 40, 114); 
+    border: 1px solid rgb(0, 40, 114); 
+    padding: 10px 60px; 
+    border-radius: 0; 
+    display: table; 
+    margin: 20px auto 0; 
+    text-decoration: none; 
+    z-index: 1; 
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .more-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: white; 
+    transition: width 0.3s ease; 
+    transform: translateX(-50%); 
+    z-index: -1; 
+  }
+  
+  .more-link:hover::before {
+    width: 100%; 
+  }
+  
+  .more-link:hover {
+    color: rgb(0, 40, 114); 
+  }
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    font-family: "Lora", "Noto Sans JP", serif; 
+    font-weight: normal; 
+    line-height: 1; 
+  }
+  
+  .field--name-field-category .field__item {
+    color: rgb(0, 40, 114);  
+    font-size: 0.8rem; 
+    font-weight: 500; 
+    margin-bottom: 0.5rem;
+    display: block;
+    font-family: "Lora", "Noto Sans JP", serif; 
+    line-height: 1.25; 
+  }
+  
+  .field--name-title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 13px; 
+    font-weight: bold;
+    line-height: 1.54;
+    color: rgb(16, 18, 20);
+    max-width: 200px; 
+    overflow-wrap: break-word; 
+    margin-bottom: 0.8rem;
+    flex-grow: 1; 
+  }
+  
+  .field--name-field-event-date,
+  .field--name-field-venue {
+    font-size: 0.75rem; 
+    color: #666;
+    display: block;
+    margin: 0.3rem 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500; 
+    line-height: 1.25; 
+  }
+  
+  .recent-article-list__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+  }
+  
+  .recent-article-list__item {
+    width: 25%; 
+    margin: 0; 
+    box-sizing: border-box;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    /* 新增统一高度 */
+    height: 200px; /* 可根据实际情况调整 */
+  }
+  
+  .field--name-field-featured-image {
+    width: 65px; 
+    height: 65px; 
+    margin: 0; 
+    padding: 0; 
+    flex-shrink: 0;
+    overflow: hidden; 
+  }
+  
+  .recent-article-list__item > div:not(.field--name-field-featured-image) {
+    flex-grow: 1; 
+    padding-left: 5px; 
+  }
+  
+  .small-teaser-event__title {
+    display: flex; 
+    gap: 10px; 
+    margin-right: 15px;
+  }
+  
+  .field--name-field-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0; 
+    transition: transform 0.3s ease; 
+  }
+  
+  /* 合并悬停效果 */
+  .small-teaser-event__title:hover .field--name-title {
+    text-decoration: underline;
+  }
+  
+  .small-teaser-event__title:hover .field--name-field-featured-image img {
+    transform: scale(1.1);
+  }
+  
+  /* 移除原有的单独悬停效果 */
+  /*
+  .small-teaser-event__title .field--name-title:hover {
+    text-decoration: underline;
+  }
+  
+  .small-teaser-event__title .field--name-title:hover ~ .field--name-field-featured-image img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+  }
+  */
+  
+  .small-teaser-event__meta {
+    margin-top: auto; 
+  }
+  
+  .recent-article-list__item:nth-child(-n+4) {
+    position: relative; 
+    padding-top: 3px; 
+  }
+  
+  .recent-article-list__item:nth-child(-n+4)::before {
+    content: "";
+    position: absolute;
+    top: -5px; 
+    left: 0;
+    width: calc(100% - 20px); 
+    height: 3px; 
+    background-color: rgb(0, 40, 114); ; 
+  }
+  
+  .small-teaser-event .field--name-field-event-date,
+  .small-teaser-event .field--name-field-venue {
+    display: block;
+    margin-top: 10px; 
+    margin-right: 15px; 
+  }
+  
+  .small-teaser-event__title .field--name-title:hover {
+    text-decoration: underline;
+  }
+  
+  .small-teaser-event__title .field--name-title:hover ~ .field--name-field-featured-image img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+  }
+  
+  /* 新闻部分样式 */
+  .kyoto-news {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .section-title {
+    color: rgb(0, 40, 114); ;
+    text-align: center;
+    font: 400 28px / 1.25 "Lora", "Noto Sans JP", serif;
+  }
+  
+  .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+    max-width: 1200px;
+  }
+  
+  .news-item {
+    flex: 0 0 calc(25% - 12px); 
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0 6px; 
+  }
+  
+  .news-item::before {
+    content: "";
+    display: block;
+    height: 3px; 
+    background-color: rgb(0, 40, 114); ; 
+    margin-bottom: 10px; 
+  }
+  
+  .news-item time {
+    display: block; 
+    margin-bottom: 2px; 
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 300; 
+    font-size: 14px; 
+  }
+  
+  .news-category {
+    display: block; 
+    margin-bottom: 2px; 
+    color: rgb(0, 40, 114); 
+  }
+  
+  .news-title {
+    font-weight: 500; 
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .news-title:hover {
+    text-decoration: underline; 
+  }
+  
+  /* 查看更多链接样式 */
+  .middle-line {
+      width: 100%; /* 细线宽度占满父容器 */
+      height: 1px; /* 细线高度 */
+      background-color: #ccc; /* 细线颜色，可按需修改 */
+      margin: 30px 0; /* 上下外边距，可按需调整 */
+  }
+  
+  .more-link {
+    position: relative;
+    color: white;
+    background-color: rgb(0, 40, 114); 
+    border: 1px solid rgb(0, 40, 114); 
+    padding: 6px 45px; 
+    border-radius: 0; 
+    display: table; 
+    margin: 20px auto 0; 
+    text-decoration: none; 
+    z-index: 1; 
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .more-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: white; 
+    transition: width 0.3s ease; 
+    transform: translateX(-50%); 
+    z-index: -1; 
+  }
+  
+  .more-link:hover::before {
+    width: 100%; 
+  }
+  
+  .more-link:hover {
+    color: rgb(0, 40, 114); 
+  }
+  
+  .more-link span {
+    display: block;
+    position: relative;
+  }
+  
+  .more-link span a {
+    color: inherit; 
+    text-decoration: none; 
+    font-size: 0.7rem; 
+    font-family: "Lora", "Noto Sans JP", serif; 
+    font-weight: 500; 
+    line-height: 1.25; 
+  }
+  
+  /* 从 er.css 过来的样式（确保无重复后保留） */
+  .event-item-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .event-text-content {
+    flex: 1;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 1024px) {
+    .recent-article-list__item {
+      width: calc(33.333% - 20px); 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .recent-article-list__item {
+      width: calc(50% - 20px); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recent-article-list__items {
+      flex-direction: row; 
+      margin: 0;
+    }
+    
+    .recent-article-list__item {
+      width: auto;
+      margin: 0 5px;
+      flex-direction: column;
+    }
+    
+    .field--name-field-featured-image {
+      width: 50px; 
+      height: 50px; 
+      margin-bottom: 12px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .field--name-field-featured-image img {
+      height: 100%; 
+    }
+    
+    .recent-article-list__item > div:not(.field--name-field-featured-image) {
+      padding-left: 0; 
+    }
+  }
+  
+  /* 新添加的容器样式 */
+  .event-image-title-container {
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+  }
+  
+  /* 图片容器样式，可根据需要调整间距 */
+  .field.field--name-field-featured-image {
+    margin-right: 10px; /* 图片和标题之间的间距 */
+  }
+  
+  .image-text-container {
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+  }
+  }
+  .chenyu{
+  .research-news-section {
+    /* 保持原有body样式但限定在容器内 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: auto;
+    margin: 8px 15px;
+    color: #101214;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.54;
+    background-color: rgb(217, 219, 222);
+}
+
+.research-news-section .block__title {
+    text-align: center;
+    color: #00205b;
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+/* 其他所有样式规则都需要添加.research-news-section前缀 */
+.research-news-section .sectioning-block h2 {
+    margin: 0 0 26px;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    color: #00205b;
+    font: 500 28px / 1.25 "Lora", "Noto Sans JP", serif;
+}
+
+/* 以此类推，为所有样式规则添加.research-news-section前缀 */
+.research-news-section .node-list__title {
+  margin: 6px 0 0;
+  padding: 0;
+  border: 0;
+  /* 增大字体大小，可根据需求调整 */
+  font-size: 20px; 
+  font-weight: 650;
+  line-height: 24px;
+  color: black;
+  text-align: left; 
+}
+
+/* 修改 .article-sub-list__items 的 flex-wrap 属性 */
+.research-news-section .article-sub-list__items {
+  /* 保持原有样式，确保弹性布局 */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  /* 默认情况下禁止换行 */
+  flex-wrap: nowrap; 
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  /* 减小左右内边距，假设从 20px 变为 10px */
+  padding: 0 10px; 
+}
+
+/* 让 .node-list__content 内的文字靠左 */
+.research-news-section  .node-list__content {
+  text-align: left; /* 修改文字对齐方式 */
+  width: 100%;
+  font-size: 14px; 
+}
+
+/* 让 .node-list__title 内的文字靠左 */
+.research-news-section .node-list__title {
+  margin: 6px 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 24px;
+  color: black;
+  text-align: left; /* 修改文字对齐方式 */
+}
+
+.research-news-section .article-sub-list__item img {
+  /* 让图片宽度和高度占满父容器 */
+  width: 100%;
+  height: 100%;
+  /* 保持图片的宽高比，同时填充整个容器，可能会裁剪部分图片 */
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-top: 0;
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.article-sub-list__item:hover img,
+.research-news-section .node-list__link:hover ~ img {
+  transform: scale(1.10);
+}
+
+.research-news-section .node-list__link {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.research-news-section .node-list__link:hover {
+  text-decoration: none; /* 移除悬停时的下划线 */
+  transform: scale(1.02); /* 鼠标悬停时放大文字 */
+}
+
+.research-news-section .more-link {
+  position: relative;
+  color: white;
+  background-color: rgb(0, 40, 114); 
+  border: 1px solid rgb(0, 40, 114); 
+  padding: 8px 52px; 
+  border-radius: 0; 
+  display: table; 
+  margin: 20px auto 0; 
+  text-decoration: none; 
+  z-index: 1; 
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.research-news-section .more-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: white; 
+  transition: width 0.3s ease; 
+  transform: translateX(-50%); 
+  z-index: -1; 
+}
+
+.research-news-section .more-link:hover::before {
+  width: 100%; 
+}
+
+.research-news-section .more-link:hover {
+  color: rgb(0, 40, 114); 
+}
+
+.research-news-section .article-sub-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  padding: 0 30px 30px 30px; 
+  border-radius: 0;
+  width: calc(25% - 10px); 
+  height: auto;
+  flex-shrink: 0;
+  margin: 20px 15px; 
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+.research-news-section .article-sub-list__item img {
+  /* 确保图片宽度为父容器宽度减去左右内边距 */
+  width: calc(100% + 60px); 
+  /* 让图片相对于父容器左移 30px 来贴紧左边框 */
+  margin-left: -30px; 
+  height: 100%;
+  object-fit: cover; 
+  /* 将 border-radius 设置为 0 以实现 90 度角 */
+  border-radius: 0;
+  margin-top: 0;
+  transition: transform 0.3s ease; 
+}
+
+/* 小屏幕下启用弹性换行 */
+@media (max-width: 768px) {
+  .research-news-section .article-sub-list__items {
+    /* 小屏幕下允许换行 */
+    flex-wrap: wrap; 
+  }
+
+  .research-news-section .article-sub-list__item {
+    /* 小屏幕下设置合适的宽度 */
+    width: calc(50% - 30px); 
+    margin: 20px 15px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .research-news-section .article-sub-list__item {
+    /* 更小屏幕下每个元素占满一行 */
+    width: calc(100% - 30px); 
+  }
+}
+
+.research-news-section ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+@media (min-width: 48em) {
+  .research-news-section .sectioning-block > h2 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+/* 为 .node-list__title 添加悬停下划线 */
+.research-news-section .node-list__title:hover {
+  text-decoration: underline;
+}
+
+/* 定义水平线样式 */
+.research-news-section .full-width-line {
+  display: block; 
+  /* 让元素脱离文档流，相对于视口定位 */
+  position: absolute; 
+  left: 0;
+  right: 0;
+  border: none; 
+  border-top: 1px solid rgba(51, 101, 192, 0.445); 
+  /* 调整上下外边距 */
+  margin: 40px 0; 
+}
+
+/* 移除特定类超链接的默认样式 */
+.research-news-section .full-width-divider {
+  display: block; 
+  /* 让元素脱离文档流，相对于视口定位 */
+  position: absolute; 
+  left: 0;
+  right: 0;
+  height: 1px; 
+  background-color: #000; 
+  /* 调整上下外边距 */
+  margin: 10px 0 20px 0; 
+}
+
+.research-news-section .field--name-field-publication-date {
+    /* 给日期区域上方添加 1em 的外边距，你可以根据需要调整这个值 */
+    margin-top: 1em; 
+}
+}
+
+  .wwy h1 {
+    color: rgb(0, 32, 91);
+    text-align: center;
+    margin: 0px 0px 16px;
+    padding: 0px;
+    border-width: 0px;
+    font: 500 24px / 1.25 "Lora", "Noto Sans JP", serif;
+    display: block;
+  }
+  
+  .wwy .image-with-a {
+    text-align: center;
+  }
+  .wwy .image-with-a a {
+    color: #00205b;
+    text-decoration: none;
+  }
+  .wwy .image-with-a a:hover {
+    text-decoration: underline;
+  }
+  
+  .wwy {
+    --primary-color: #00205b;
+    --secondary-bg: #d9dbde;
+    --item-gap: 20px;
+    --hover-scale: 1.1;
+  }
+  
+  .wwy body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .wwy .japanese-text {
+    font-size: 11px;
+    line-height: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .wwy .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--item-gap);
+  }
+  
+  .wwy .image-item {
+    width: calc(25% - var(--item-gap));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; 
+  }
+  
+  .wwy .image-item img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; 
+    transform-origin: center; 
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .wwy .image-item a {
+    color: var(--primary-color); 
+    font-weight: bold;
+    word-break: keep-all;
+    background-color: var(--secondary-bg); 
+    padding: 10px 12px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%; 
+    box-sizing: border-box; 
+    text-decoration: none;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 60px; 
+    z-index: 2;
+    font-family: "Lora", "Noto Sans JP", serif;
+  }
+  
+  .wwy .image-item:hover img {
+    transform: scale(var(--hover-scale)); 
+  }
+  
+  .wwy .image-item:hover a {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 900px) {
+    .wwy .image-item {
+      width: calc(50% - 15px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .wwy .image-item {
+      width: 100%;
+    }
+  }
+.zzx{
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 设置全局基础字体大小，可按需调整 */
+    font-size: 13px; 
+  }
+  body {
+    font-family: 'Noto Sans JP', sans-serif; /* 添加字体设置 */
+    font-weight: bold;
+    font-weight: 340;
+  }
+  
+  .header {
+    background-color: #fff4f4;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: center; /* 水平居中排列子元素 */
+    align-items: center; /* 垂直居中排列子元素 */
+    gap: 30px; /* 设置子元素之间的间距 */
+  }
+  
+  .social-icons a {
+    display: inline-flex; /* 让链接元素也使用 Flexbox 布局 */
+    align-items: center; /* 确保图标和文字垂直居中 */
+  }
+  
+  .social-icons img {
+    /* 设置社交媒体图标大小 */
+    .social-icons a img {
+        width: 30px; /* 可根据需要调整宽度 */
+        height: 30px; /* 可根据需要调整高度 */
+        object-fit: cover; /* 确保图片覆盖整个区域，避免变形 */
+    }
+  }
+  
+  .serial-media {
+    font-size: 14px; /* 可按需调整字体大小 */
+    text-decoration: none;
+    color: #00008B;
+    transition: color 0.3s ease;
+    font-weight: 600; /* 调小该值让文字变细，范围 100 - 900 */
+  }
+  .serial-media {
+      /* 已有的样式 */
+      color: #00008B;
+  }
+  
+  /* 删除 .serial-media::after 选择器，移除下划线动画 */
+  
+  .serial-media:hover {
+    color: #c4a05e;
+  }
+  
+  .serial-media:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .footer {
+    background-color: #003366;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* 让子元素在交叉轴（垂直方向）底部对齐 */
+  }
+  .footer-nav a:hover {
+    color: #a5864c; /* 悬停时文字颜色 */
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column; /* 让子元素垂直排列 */
+    align-items: flex-start; /* 让子元素在交叉轴（水平方向）左侧对齐 */
+    gap: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 12px; 
+    color: #f7f6f6; 
+    opacity: 0.6; 
+    margin: 0; /* 重置默认外边距 */
+  }
+  
+  .logo {
+    width: 你期望的宽度; 
+    height: 你期望的高度; 
+    /* 或者使用 max-width 和 max-height 来限制最大尺寸 */
+    max-width: 你期望的最大宽度; 
+    max-height: 你期望的最大高度; 
+  }
+  
+  .contact-info p {
+    font-size: 12px; 
+    color: #f7f6f6; 
+    opacity: 0.6; 
+    margin-top: 5px; /* 元素顶部外边距 */
+    margin-left: 5px; /* 元素左侧外边距 */
+    padding: 5px; /* 元素内边距 */
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 定义 3 列，每列宽度相等 */
+    grid-template-rows: repeat(2, auto); /* 定义 2 行，行高自动 */
+    gap: 10px; /* 行列之间的间距 */
+  }
+  
+  
+  .footer-nav a {
+    color: white;
+    text-decoration: none;
+    /* 确保页脚导航字体大小一致 */
+    font-size: 12px; 
+  }
+  
+  .safety-check,
+  .faculty {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease;
+    position: relative; 
+    overflow: hidden;
+    /* 确保链接本身层级较高 */
+    z-index: 1; 
+  }
+  
+  .safety-check::before,
+  .faculty::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    /* 白色背景，可根据需要调整透明度 */
+    background-color: rgba(255, 255, 255,0.7); 
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: width 0.3s ease; 
+    /* 确保伪元素在链接下方 */
+    z-index: -1; 
+  }
+  
+  .safety-check:hover::before,
+  .faculty:hover::before {
+    width: 100%;
+  }
+  .copyright {
+    background-color: #002244;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 6px;
+  }
+  html body div.copyright p {
+      font-size: 10px; /* 调整为你想要的大小 */
+      opacity: 0.5; /* 调整透明度，值越小越透明，可按需修改 */
+  }
+  .footer-nav a {
+      margin-right: 15px;
+  }
+  
+  .footer-nav a:last-child {
+      margin-right: 0;
+  }
+  
+  /* 为社交媒体图标链接设置初始样式 */
+  .social-icons a {
+      opacity: 1; /* 初始透明度为 1，即完全不透明 */
+      transition: opacity 0.3s ease; /* 添加过渡效果，让透明度变化更平滑 */
+  }
+  
+  /* 为社交媒体图标链接设置鼠标悬停样式 */
+  .social-icons a:hover {
+      opacity: 0.5; /* 鼠标悬停时透明度变为 0.5 */
+  }
+  
+}
